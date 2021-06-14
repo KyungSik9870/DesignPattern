@@ -25,6 +25,6 @@ public class CurrentlyConditionalDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void display() {
-		System.out.println("Current conditions : " + temparature + "F degrees and " + humidity + "% humidity");
+		System.out.println("Current conditions : " + temparature + "F degrees & " + humidity + "% humidity");
 	}
 }
