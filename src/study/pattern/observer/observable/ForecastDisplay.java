@@ -1,4 +1,4 @@
-package study.pattern.observer;
+package study.pattern.observer.observable;
 
 import java.util.Observable;
 import java.util.Observer;

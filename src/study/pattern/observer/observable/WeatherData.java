@@ -1,9 +1,9 @@
-package study.pattern.observer;
+package study.pattern.observer.observable;
 
 import java.util.Observable;
 
 public class WeatherData extends Observable {
-	private float temparature;
+	private float temperature;
 	private float humidity;
 	private float pressure;
 
@@ -15,15 +15,15 @@ public class WeatherData extends Observable {
 		notifyObservers();
 	}
 
-	public void setMeasurements(float temparature, float humidity, float pressure) {
-		this.temparature = temparature;
+	public void setMeasurements(float temperature, float humidity, float pressure) {
+		this.temperature = temperature;
 		this.humidity = humidity;
 		this.pressure = pressure;
 		measurementsChanged();
 	}
 
-	public float getTemparature() {
-		return temparature;
+	public float getTemperature() {
+		return temperature;
 	}
 
 	public float getHumidity() {

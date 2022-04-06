@@ -1,11 +1,11 @@
-package study.pattern.observer;
+package study.pattern.observer.observable;
 
 import java.util.Observable;
 import java.util.Observer;
 
 public class CurrentlyConditionalDisplay implements Observer, DisplayElement {
 	Observable observable;
-	private float temparature;
+	private float temperature;
 	private float humidity;
 
 	public CurrentlyConditionalDisplay(Observable observable) {
@@ -17,7 +17,7 @@ public class CurrentlyConditionalDisplay implements Observer, DisplayElement {
 	public void update(Observable o, Object arg) {
 		if (o instanceof WeatherData) {
 			WeatherData weatherData = (WeatherData)o;
-			this.temparature = weatherData.getTemparature();
+			this.temperature = weatherData.getTemperature();
 			this.humidity = weatherData.getHumidity();
 			display();
 		}
@@ -25,6 +25,6 @@ public class CurrentlyConditionalDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void display() {
-		System.out.println("Current conditions : " + temparature + "F degrees & " + humidity + "% humidity");
+		System.out.println("Current conditions : " + temperature + "F degrees & " + humidity + "% humidity");
 	}
 }
