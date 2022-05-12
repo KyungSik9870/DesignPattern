@@ -1,4 +1,4 @@
-package study.pattern.singleton.command;
+package study.pattern.command;
 
 public class RemoteControl {
 	Command[] onCommands;
